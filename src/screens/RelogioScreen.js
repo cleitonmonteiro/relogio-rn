@@ -13,7 +13,7 @@ export default class RelogioScreen extends Component {
   }
 
   componentDidMount() {
-    // executa após componente ser inicializado
+    // executa após componente ser inicializad0
     this.timer = setInterval(() => this.tique(), 1000);
   }
 
