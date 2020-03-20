@@ -1,33 +1,44 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet, ImageBackground, Image} from 'react-native';
 
-import {defaultStyles} from '../styles';
+import {defaultStyles, } from '../styles';
 
 export default class RelogioScreen extends Component {
   state = {
     horario: new Date(),
-  };
-
-  tique() {
-    this.setState({ horario: new Date() });
   }
 
   componentDidMount() {
-    // executa após componente ser inicializad0
-    this.timer = setInterval(() => this.tique(), 1000);
+    this.relogio = setInterval(() => this.setState({horario: new Date()}), 1000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer);
+    this.relogio = null;
   }
 
-  //defaultStyles.center
+  //<Text style={styles.timeNow}>{this.state.horario.toLocaleTimeString()}</Text>
+
+  // <View style={defaultStyles.center}>
+
+  // </View>
 
   render() {
     return (
-      <Text style={defaultStyles.center}>
-        {this.state.horario.toLocaleTimeString()}
-      </Text>
+      <View>
+        <ImageBackground source={require('../images/clock.png')} style={{width: 350, height: 350, position: 'relative', marginLeft: 25, marginTop: 150}}>
+          <View style={defaultStyles.center}>
+            <Text style={styles.timeNow}>{this.state.horario.toLocaleTimeString()}</Text>
+          </View>
+        </ImageBackground>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  timeNow: {
+    textShadowRadius: 7,
+    fontSize: 60,
+    color: 'tomato',
+  },
+});
