@@ -73,9 +73,6 @@ export default class CronometroScreen extends Component {
           </View>
         </View>
 
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>TEXTO</Text>
-        </View>
       </View>
       // <View>
       //   <ImageBackground source={require('../images/crono.png')} style={{width: 450, height: 450, position: 'relative', marginLeft: -30, marginTop: 70}}>
@@ -97,7 +94,7 @@ export default class CronometroScreen extends Component {
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: '#221D41',
+    backgroundColor: '#FF7F50',
     justifyContent: 'center',
   },
   fContainer:{
@@ -110,19 +107,21 @@ const styles = StyleSheet.create({
   },
   counterText:{
     color: '#fff',
-    fontSize: 40,
+    fontSize: 60,
     fontWeight: 'bold',
   },
   button:{
-    backgroundColor: '#331DF4',
+    backgroundColor: '#000000',
     marginHorizontal: 15,
-    height: 40,
+    height: 60,
     justifyContent: 'center',
-    width: 75,
-    alignItems: 'center'
+    width: 95,
+    alignItems: 'center',
+    borderRadius: 10,
   },
   buttonText:{
-    color: '#fff'
+    color: '#fff',
+    fontSize: 20,
   },
   footer:{
     position: 'absolute',

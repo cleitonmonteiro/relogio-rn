@@ -37,8 +37,9 @@ export default class RelogioScreen extends Component {
 
 const styles = StyleSheet.create({
   timeNow: {
-    textShadowRadius: 7,
+    // textShadowRadius: 7,
     fontSize: 60,
-    color: 'tomato',
+    color: '#FF7F50',
+    fontWeight: 'bold',
   },
 });
