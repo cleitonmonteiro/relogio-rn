@@ -11,7 +11,7 @@ export default class CronometroScreen extends Component {
     this.state ={
       timer: null,
       number: 0,
-      startStopText: 'Start',
+      startStopText: 'Iniciar',
     }
 
     this.startStopButton = this.startStopButton.bind(this);
@@ -25,7 +25,7 @@ export default class CronometroScreen extends Component {
       //inicia
 
       let newS = this.state;
-      newS.startStopText = 'Stop';
+      newS.startStopText = 'Parar';
       this.setState(newS);
 
       this.state.timer = setInterval(() => {
@@ -39,7 +39,7 @@ export default class CronometroScreen extends Component {
       clearInterval(this.state.timer);
 
       let newState = this.state;
-      newState.startStopText = 'Start';
+      newState.startStopText = 'Iniciar';
       newState.timer = null;
       this.setState(newState);
 
@@ -50,7 +50,7 @@ export default class CronometroScreen extends Component {
 
     clearInterval(this.state.timer);
     let newState = this.state;
-    newState.startStopText = 'Start';
+    newState.startStopText = 'Iniciar';
     newState.timer = null;
     newState.number = 0;
     this.setState(newState);
@@ -59,21 +59,20 @@ export default class CronometroScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.fContainer}>
-          <Text style={styles.counterText}>{this.state.number.toFixed(1)}</Text>
-
+        <View style={styles.container}>
+          <ImageBackground source={require('../images/cronometro.png')} style={{width: 250, height: 350, flex: 1, marginTop: 100}}></ImageBackground>
+          <View style={styles.fContainer}>
+            <Text style={styles.counterText}>{this.state.number.toFixed(1)}</Text>
+          </View>
           <View style={styles.buttonContainer}>
             <TouchableHighlight style={styles.button}>
-    <Text style={styles.buttonText} onPress={this.startStopButton}>{this.state.startStopText}</Text>
+              <Text style={styles.buttonText} onPress={this.startStopButton}>{this.state.startStopText}</Text>
             </TouchableHighlight>
             <TouchableHighlight style={styles.button}>
               <Text style={styles.buttonText} onPress={this.clearButton}>Limpar</Text>
             </TouchableHighlight>
           </View>
         </View>
-
-      </View>
       // <View>
       //   <ImageBackground source={require('../images/crono.png')} style={{width: 450, height: 450, position: 'relative', marginLeft: -30, marginTop: 70}}>
       //     <View style={defaultStyles.center}>
@@ -93,25 +92,26 @@ export default class CronometroScreen extends Component {
 
 const styles = StyleSheet.create({
   container:{
-    flex: 1,
-    backgroundColor: '#FF7F50',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   fContainer:{
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginTop: 180,
   },
   buttonContainer:{
     flexDirection: 'row',
     padding: 20,
+    marginTop: 100,
   },
   counterText:{
-    color: '#fff',
-    fontSize: 60,
+    color: '#FF7F50',
+    fontSize: 55,
     fontWeight: 'bold',
   },
   button:{
-    backgroundColor: '#000000',
+    backgroundColor: '#353839',
     marginHorizontal: 15,
     height: 60,
     justifyContent: 'center',
