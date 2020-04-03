@@ -1,4 +1,8 @@
 # Relógio/Cronometro em React Native.
+> Equipe: Cleiton Monteiro, Isaac Ribeiro, Maria Elane e Susana Moreira.
+
+## Tela
+! [] (cronometro.gif)
 
 ## Como executar?
 ```sh
