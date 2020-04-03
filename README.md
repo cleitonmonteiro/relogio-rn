@@ -12,8 +12,6 @@ O projeto apresenta duas abas para o usuário: **relógio** e **cronômetro**. N
 
 ![ferramentas.png](https://github.com/cleitonmonteiro/relogio-rn/blob/master/ferramentas.png)
 
-## Informações
-
 ## Execução
 
 **Para a execução do projeto, basta seguir os seguintes passos:**
