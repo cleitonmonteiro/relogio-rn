@@ -2,7 +2,7 @@
 > Equipe: Cleiton Monteiro, Isaac Ribeiro, Maria Elane e Susana Moreira.
 
 ## Tela
-! [] (relogio-rn/cronometro.gif)
+![cronometro.gif](https://ibb.co/s2jVWXp)
 
 ## Como executar?
 ```sh
